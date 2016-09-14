@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_message"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_belong_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_belong_avatar"
+            android:layout_toEndOf="@+id/iv_belong_avatar"
+            android:text="神马小二-二郎神"
+            android:textSize="@dimen/global_text_size"
+            android:textColor="@android:color/white" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_belong_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            fresco:failureImage="@drawable/icon_error"
+            fresco:placeholderImage="@mipmap/avatar_default"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_belong_avatar"
+            android:layout_toEndOf="@+id/iv_belong_avatar"
+            android:text="01-28 20:57"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/global_small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_isReaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tv_belong_nickname"
+            android:text="未读"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/global_small_text_size" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/global_mid_text_size" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="消息"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

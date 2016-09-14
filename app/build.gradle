@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+// 配置了所有android构建的参数
+android {
+    // 编译使用SDK版本
+    signingConfigs {
+        nEdAy {
+            keyAlias 'neday'
+            keyPassword 'abcd1234'
+            storeFile file('Z:/Users/nEdAy/nEdAy.jks')
+            storePassword 'abcd1234'
+        }
+    }
+    compileSdkVersion 23
+    // 编译工具的版本
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        //包名
+        applicationId "com.xpple.sheep"
+        //sdk最低支持版本
+        minSdkVersion 17
+        //noinspection OldTargetApi  逃避权限管理,兼容安全软键盘so,壓制目标SDK版本，如果目标设备的API版本正好等于此数值，就不会为此程序开启兼容性检查判断的工作
+        targetSdkVersion 22
+        //版本号
+        versionCode 19
+        versionName "1.6.8"
+        resConfigs "zh"
+        //所有版本原生配置
+        ndk {
+            abiFilters 'armeabi', "x86"
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            //显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+//            //设置是否混淆
+//            minifyEnabled true
+//            //设置压缩对齐 Zipalign优化
+//            zipAlignEnabled true
+//            //移除无用的资源文件  慎用危险！如方法getResources().getIdentifier无效,另阿里百川和京东开普勒的图片签名认证会出现问题
+//            //shrinkResources true
+            signingConfig signingConfigs.nEdAy
+//            //设置混淆配置文件 proguard-android.txt在sdk目录里面，不用管，proguard-rules.pro是我们自己配的混淆文件
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        // 发布时候的设置
+        release {
+            //不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //设置是否混淆
+            minifyEnabled true
+            //设置压缩对齐 Zipalign优化
+            zipAlignEnabled true
+            //移除无用的资源文件  慎用危险！如方法getResources().getIdentifier无效,另阿里百川和京东开普勒的图片签名认证会出现问题
+            //shrinkResources true
+            signingConfig signingConfigs.nEdAy
+            //设置混淆配置文件 proguard-android.txt在sdk目录里面，不用管，proguard-rules.pro是我们自己配的混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    splits {
+        abi {
+            //启用ABI拆分机制
+            enable true
+            //重置ABI列表为只包含一个空字符串（这可以实现，在与include一起使用来可以表示要使用哪一个ABI，而不是要忽略哪一些ABI）
+            reset()
+            //默认情况下所有ABI都包括在内，你可以移除一些ABI。
+            //exclude 'x86_64', 'arm64-v8a'
+            //指明要包含哪些ABI
+            include 'armeabi', 'x86'
+            //指示是否打包一个通用版本（包含所有的ABI）。默认值为 false。
+            universalApk true
+        }
+    }
+    // map for the version code
+    project.ext.versionCodes = ['armeabi': 1, 'x86': 2]
+    android.applicationVariants.all { variant ->
+        // assign different version code for each output
+        variant.outputs.each { output ->
+            output.versionCodeOverride =
+                    project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) * 1000000 + android.defaultConfig.versionCode
+    }
+}
+productFlavors {
+
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+// 依赖的工具包
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':OneSDK')
+    compile project(':JdSDK')
+    compile 'com.android.support:support-v4:23.3.0'
+    testCompile 'junit:junit:4.12'
+    //Leakcanary 发布前清理
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //短信依赖
+    compile name: 'SMSSDK-2.0.2', ext: 'aar'
+    //SVProgressHUD
+    compile 'com.bigkoo:svprogresshud:1.0.2'
+    //沉浸式状态栏
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //Fresco
+    compile 'com.facebook.fresco:fresco:0.9.0'
+    compile 'com.facebook.fresco:imagepipeline-okhttp:0.9.0'
+    //Rx
+    compile 'io.reactivex:rxjava:1.1.3'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    //http Log 发布前清理
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    //Retrofit 2.0
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'
+    //Retrofit Converter-Gson 2.0
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    //FloatingActionButton
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    //Logger
+    compile 'com.orhanobut:logger:1.8'
+    //Umeng统计分析
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //FlycoTabLayout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'
+    compile 'com.flyco.banner:FlycoBanner_Lib:2.0.2@aar'
+    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+}

@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar.TranslucentDecor">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:textColor">@color/global_text_color</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+</resources>

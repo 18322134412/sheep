@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_shake"
+        android:layout_width="match_parent"
+        android:layout_height="150.0dip"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_title_bar"
+        android:background="#ffffffff"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_total_shake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="获奖次数"
+            android:textColor="@color/global_label_color"
+            android:textSize="20.0sp" />
+
+        <TextView
+            android:id="@+id/tv_shake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_total_shake"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5.0dip"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@color/global_red_color"
+            android:textSize="56.0sp" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/include_anything_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_shake" />
+
+
+</RelativeLayout>

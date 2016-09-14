@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_red_color">
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tl_activity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        tl:tl_indicator_color="@android:color/holo_red_light"
+        tl:tl_indicator_corner_radius="5dp"
+        tl:tl_indicator_margin_left="2dp"
+        tl:tl_indicator_margin_right="2dp"
+        tl:tl_indicator_style="BLOCK"
+        tl:tl_textSelectColor="@android:color/white"
+        tl:tl_textUnselectColor="@color/global_text_color" />
+
+
+    <View
+        android:id="@+id/ivItemDividerBelowRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/tl_activity"
+        android:background="@color/divide_line_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpItemLeftPaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ivItemDividerBelowRl"
+        android:background="@android:color/white" />
+</RelativeLayout>

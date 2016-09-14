@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_title_bar">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:src="@mipmap/sign_in_a" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="稳健型"
+                android:textSize="@dimen/global_mid_text_size" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每天稳赚2积分"
+                android:textColor="@color/global_gray_color"
+                android:layout_below="@+id/textView14"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tv_sign_in_1"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:background="@drawable/global_red_clickable_selector"
+                android:gravity="center"
+                android:enabled="false"
+                android:text="签到领积分"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_top_line_0"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/relativeLayout6"
+        android:background="@color/global_line_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/view_top_line_0"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:src="@mipmap/sign_in_b" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="任性型"
+                android:textSize="@dimen/global_mid_text_size" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消耗1分，领1 ~ 5积分"
+                android:textColor="@color/global_gray_color"
+                android:layout_below="@+id/textView17"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tv_sign_in_2"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:background="@drawable/global_red_clickable_selector"
+                android:gravity="center"
+                android:text="签到领积分"
+                android:enabled="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_top_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/relativeLayout7"
+        android:background="@color/global_line_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/view_top_line_1"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:src="@mipmap/sign_in_c" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/imageView4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="冒险型"
+                android:textSize="@dimen/global_mid_text_size" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="随机领取-2 ~ 8积分"
+                android:textColor="@color/global_gray_color"
+                android:layout_below="@+id/textView20"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tv_sign_in_3"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:background="@drawable/global_red_clickable_selector"
+                android:gravity="center"
+                android:text="签到领积分"
+                android:enabled="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_top_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/relativeLayout8"
+        android:background="@color/global_line_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+</RelativeLayout>

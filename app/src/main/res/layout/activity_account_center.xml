@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_title_bar"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:id="@+id/big_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/global_background_color">
+
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_alignParentStart="true"
+                android:background="@mipmap/bg_vip">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/riv_avatar"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    fresco:failureImage="@drawable/icon_error"
+                    fresco:placeholderImage="@mipmap/avatar_default"
+                    fresco:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/riv_avatar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="未设置"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/global_big_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/riv_avatar"
+                    android:layout_alignTop="@+id/riv_avatar"
+                    android:layout_marginTop="3dp"
+                    android:src="@mipmap/level_0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/account_item_height"
+                android:layout_below="@+id/rl_info"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_account"
+                    android:layout_width="35.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/acc_user" />
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_toRightOf="@+id/iv_account"
+                    android:text="@string/account_center_account"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <LinearLayout
+                    android:id="@+id/ll_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/account_item_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_account_real"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="170****0000"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_key_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/account_item_height"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rl_account"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_key"
+                    android:layout_width="35.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/key_account_center_h1" />
+
+                <TextView
+                    android:id="@+id/tv_key_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_toRightOf="@+id/iv_key"
+                    android:text="@string/account_center_key_login"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:layout_toRightOf="@+id/iv_key"
+                    android:background="@color/global_line_color" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15.0dip"
+                    android:src="@mipmap/sc_arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_key_trading"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/account_item_height"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rl_key_login"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_key1"
+                    android:layout_width="35.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/key_account_center_h2" />
+
+                <TextView
+                    android:id="@+id/tv_key_trading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_toRightOf="@+id/iv_key1"
+                    android:text="@string/account_center_key_trading"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:layout_toRightOf="@+id/iv_key1"
+                    android:background="@color/global_line_color" />
+
+                <ImageView
+                    android:id="@+id/iv_key_trading_real"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15.0dip"
+                    android:src="@mipmap/sc_arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_change_skin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/account_item_height"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rl_key_trading"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_change_skin"
+                    android:layout_width="35.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/icon_change_skin" />
+
+                <TextView
+                    android:id="@+id/tv_change_skin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_toRightOf="@+id/iv_change_skin"
+                    android:text="自定义背景"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_text_size" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_success"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="200dp">
+
+        <ImageView
+            android:id="@+id/iv_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/icon_serach_success"
+            android:text="测试" />
+
+        <TextView
+            android:id="@+id/tv_hint_success"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/global_red_click_selector"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="5dip"
+            android:text="签到成功"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_hint_success"
+            android:layout_marginTop="12dip"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_info_export_background" />
+
+            <ImageView
+                android:id="@+id/iv_export"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_info_export" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_payInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="-240dip"
+                    android:background="@mipmap/bg_paysuccess_bill"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_order_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_order_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="本次获得:"
+                            android:textColor="@color/global_red_color"
+                            android:textSize="@dimen/global_big_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_order_num2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:layout_marginTop="10dip"
+                            android:text="10金币"
+                            android:textColor="@color/global_red_color"
+                            android:textSize="@dimen/global_big_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_total_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_order_num"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginTop="10dip"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_total_money1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最高获得:"
+                            android:textColor="@color/global_red_color"
+                            android:textSize="@dimen/global_big_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_total_money2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:text="10金币"
+                            android:textColor="@color/global_red_color"
+                            android:textSize="@dimen/global_big_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_total_money"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginTop="10dip"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="连续签到:"
+                            android:textColor="@color/global_red_color"
+                            android:textSize="@dimen/global_big_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_payment2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:text="3天"
+                            android:textColor="@color/global_red_color"
+                            android:textSize="@dimen/global_big_text_size" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_payment"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="145dp"
+                        android:textColor="@color/global_red_color"
+                        android:textSize="@dimen/global_big_text_size" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

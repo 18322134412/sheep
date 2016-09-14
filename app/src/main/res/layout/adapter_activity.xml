@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_activity"
+    android:layout_height="match_parent"
+    android:background="@color/global_background_color"
+    android:padding="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/riv_img"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        fresco:placeholderImage="@drawable/icon_stub"
+        fresco:failureImage="@drawable/icon_error"
+        fresco:roundAsCircle="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/riv_img"
+        android:layout_marginTop="5dp"
+        android:text="New Text"
+        android:textColor="@color/global_gray_color"
+        android:textSize="@dimen/global_small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="5dp"
+        android:text="New Text" />
+
+</RelativeLayout>

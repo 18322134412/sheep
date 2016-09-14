@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rl_no_data"
+        layout="@layout/include_no_data"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/rl_no_network"
+        layout="@layout/include_no_network"
+        android:visibility="gone" />
+
+    <com.xpple.sheep.view.xlistview.ZrcListView
+        android:id="@+id/zlv_anything"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:footerDividersEnabled="false"
+        android:scrollbarStyle="outsideOverlay" />
+</RelativeLayout>

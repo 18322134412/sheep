@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="Z:\Users\nEdAy\Desktop\Sheep\JdSDK\libs"><file name="jdmasdk.jar" path="Z:\Users\nEdAy\Desktop\Sheep\JdSDK\libs\jdmasdk.jar"/><file name="JDSDK_h_112.jar" path="Z:\Users\nEdAy\Desktop\Sheep\JdSDK\libs\JDSDK_h_112.jar"/></source></dataSet><dataSet config="release"><source path="Z:\Users\nEdAy\Desktop\Sheep\JdSDK\src\release\jniLibs"/></dataSet></merger>

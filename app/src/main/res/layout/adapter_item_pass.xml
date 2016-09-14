@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background_color"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="爆料链接"
+            android:textColor="@color/global_black_color"
+            android:textSize="@dimen/global_small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_titlr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="2"
+            android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXxxxxxxXXXXXXXXXXXXXXXXXXXXXX"
+            android:textColor="@color/global_blue_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="推荐理由"
+            android:textColor="@color/global_black_color"
+            android:textSize="@dimen/global_small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="测试"
+            android:textColor="@color/global_black_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="爆料状态"
+            android:textColor="@color/global_black_color"
+            android:textSize="@dimen/global_small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="未通过"
+            android:textColor="@color/global_red_color" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="01-28 20:57"
+            android:textColor="@color/global_gray_color"
+            android:textSize="@dimen/global_small_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_title_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="商品链接" />
+
+            <com.xpple.sheep.view.ClearEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView12"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tv_search"
+                android:background="@drawable/bg_edit_text"
+                android:drawablePadding="8.0dip"
+                android:hint="填写商品链接或在商品页面选择更多分享"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/global_mid_text_size" />
+
+
+            <TextView
+                android:id="@+id/tv_get"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/et_search"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:background="@drawable/global_red_clickable_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="获取信息"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_get"
+                android:text="欢迎把所发现的优惠信息爆料给口袋快爆，分享给广大袋友，赢取积分、打赏奖励。" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView13"
+                android:layout_marginTop="20dp"
+                android:autoText="false"
+                android:text="什么是好爆料？\n\n1.关于商品的介绍：并不单纯基于品牌和参数罗列，如有真实情感的体验，深入浅出的同类解析。果断受小编及袋友们的膜拜；\n\n2.关于产品的价格：历史低价、近期好价、单卖好价、凑单减免品，请务必一说；\n\n3.关于产品的购买：是否需要用优惠券，还是参加满减活动，描述出来让小伙伴们一同无困难多收！" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

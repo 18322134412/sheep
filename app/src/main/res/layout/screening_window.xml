@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_transparent_half"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="2.0"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="剩余期限"
+                android:textColor="@color/global_black_color"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/time_one"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:background="@drawable/screening_pop_back"
+                android:gravity="center"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                android:text="30天以下"
+                android:textColor="@color/global_label_color"
+                android:textSize="14.0sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time_two"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.0">
+
+                <TextView
+                    android:id="@+id/time_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60.0dip"
+                    android:layout_marginRight="60.0dip"
+                    android:background="@drawable/screening_pop_back"
+                    android:gravity="center"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip"
+                    android:text="30-90天"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="    "
+                android:textColor="@color/global_black_color"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/time_three"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:background="@drawable/screening_pop_back"
+                android:gravity="center"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                android:text="90-180天"
+                android:textColor="@color/global_label_color"
+                android:textSize="14.0sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time_four"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.0">
+
+                <TextView
+                    android:id="@+id/time_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60.0dip"
+                    android:layout_marginRight="60.0dip"
+                    android:background="@drawable/screening_pop_back"
+                    android:gravity="center"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip"
+                    android:text="180天以上"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="3.3"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="转让价格"
+                android:textColor="@color/global_black_color"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/price_one"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:background="@drawable/screening_pop_back"
+                android:gravity="center"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                android:text="5千以下"
+                android:textColor="@color/global_label_color"
+                android:textSize="14.0sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_price_two"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.0">
+
+                <TextView
+                    android:id="@+id/price_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60.0dip"
+                    android:layout_marginRight="60.0dip"
+                    android:background="@drawable/screening_pop_back"
+                    android:gravity="center"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip"
+                    android:text="5千到1万"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="    "
+                android:textColor="@color/global_black_color"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/price_three"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:background="@drawable/screening_pop_back"
+                android:gravity="center"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="5.0dip"
+                android:text="1万到5万"
+                android:textColor="@color/global_label_color"
+                android:textSize="14.0sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_price_four"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.0">
+
+                <TextView
+                    android:id="@+id/price_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60.0dip"
+                    android:layout_marginRight="60.0dip"
+                    android:background="@drawable/screening_pop_back"
+                    android:gravity="center"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip"
+                    android:text="5万以上"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_queding"
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_weight="0.8"
+            android:background="@drawable/global_red_clickable_selector"
+            android:gravity="center"
+            android:text="筛选"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/back_pop"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="6.0" />
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_title_bar"
+        android:background="@color/global_background_color"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/safeTipView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip">
+
+                <ImageView
+                    android:id="@+id/safeTipIcon"
+                    android:layout_width="15.0dip"
+                    android:layout_height="15.0dip"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/withdrawinfo" />
+
+                <TextView
+                    android:id="@+id/safeTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/safeTipIcon"
+                    android:text="注：收款方为第三方支付服务商"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="@dimen/global_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/paytop"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/safeTipView"
+                android:layout_marginTop="10dip"
+                android:background="@android:color/white">
+
+                <View
+                    android:id="@+id/view_top_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/global_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/paylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/global_title_banner_height"
+                    android:layout_below="@+id/view_top_line"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="金额"
+                        android:textSize="@dimen/global_mid_text_size"
+                        android:gravity="center_vertical" />
+
+                    <com.xpple.sheep.view.ClearEditText
+                        android:id="@+id/et_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_money"
+                        android:background="@null"
+                        android:hint="建议充值10元以上金额"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="@color/global_gray_color"
+                        android:textSize="@dimen/global_mid_text_size"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_bottom_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/global_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paytop">
+
+                <TextView
+                    android:id="@+id/tv_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10.0dip"
+                    android:paddingTop="10dp"
+                    android:text="如有问题，请联系neday@bk.ru"
+                    android:textColor="@color/global_red_color"
+                    android:textSize="@dimen/global_mid_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_toRightOf="@+id/tv_notice"
+                    android:paddingTop="10dp"
+                    android:src="@mipmap/red_notice" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:layout_below="@+id/rl_notice"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/global_red_clickable_selector"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/chong_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_recharge"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/cb_isagree"
+                    android:layout_width="30.0dip"
+                    android:layout_height="21.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="6.0dip"
+                    android:paddingTop="4.0dip"
+                    android:src="@mipmap/check_pressed" />
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cb_isagree"
+                    android:text="已阅读并同意《充值提现服务协议》，充值到账可能有一定延迟，请注意查收余额"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="@dimen/global_text_size" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/chong_rl"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

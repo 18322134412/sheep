@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_overage"
+        android:layout_width="match_parent"
+        android:layout_height="150.0dip"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_title_bar"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_overage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5.0dip"
+            android:includeFontPadding="false"
+            android:text="0.00"
+            android:textColor="@color/global_red_color"
+            android:textSize="56.0sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_top_line_0"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/rl_overage"
+        android:background="@color/global_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_overage_enable"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/view_top_line_0"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_overage_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="0.00"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:includeFontPadding="false"
+                    android:text="可用余额（元）"
+                    android:textColor="@color/global_gray_color"
+                    android:textSize="@dimen/global_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_recharge_history"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="充值记录"
+                android:textColor="@color/global_red_click_color"
+                android:textSize="@dimen/global_big_text_size" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_top_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/rl_overage_enable"
+        android:background="@color/global_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_overage_disable"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_top_line_1"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_overage_disable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="0.00"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:includeFontPadding="false"
+                    android:text="提现中余额（元）"
+                    android:textColor="@color/global_gray_color"
+                    android:textSize="@dimen/global_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_withdrawals_history"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="提现记录"
+                android:textColor="@color/global_red_click_color"
+                android:textSize="@dimen/global_big_text_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_top_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height"
+        android:layout_below="@+id/rl_overage_disable"
+        android:background="@color/global_line_color" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_withdrawals"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/global_red_clickable_no_corner_selector"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/account_withdrawals" />
+
+            <TextView
+                android:id="@+id/tv_withdrawals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="提现"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/divide_line_height"
+            android:layout_height="match_parent"
+            android:background="@color/global_red_click_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/global_red_clickable_no_corner_selector"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/account_recharge" />
+
+            <TextView
+                android:id="@+id/tv_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

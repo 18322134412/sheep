@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/withdrawParentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_title_bar"
+        android:background="@color/global_background_color"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/withwordlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip">
+
+                <ImageView
+                    android:id="@+id/withdrawimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/withdrawinfo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/withdrawimage"
+                    android:text="日累计小于等于100元，T+1个工作日到账，遇节假日顺延。"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="12.0sp"
+                    android:layout_marginRight="5.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/withdrawtop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/withwordlayout"
+                android:layout_marginTop="10.0dip"
+                android:background="@android:color/white">
+
+                <View
+                    android:id="@+id/view_top_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/global_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/withdrawhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="10.0dip">
+
+                    <ImageView
+                        android:id="@+id/withdrawicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginTop="10.0dip" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_mid_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_below="@+id/withdrawhead"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@color/global_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/withmoneylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_below="@+id/view_mid_line"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip">
+
+                    <TextView
+                        android:id="@+id/tixianjine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="提现金额"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="@dimen/global_text_size"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentLeft="true" />
+
+                    <com.xpple.sheep.view.ClearEditText
+                        android:id="@+id/edittixian"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tixianjine"
+                        android:background="@android:color/white"
+                        android:hint="本次最多可提现金额0元"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/global_black_color"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="@dimen/global_mid_text_size"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:gravity="center_vertical" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_bottom_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/global_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/noticwordlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/withdrawtop"
+                android:layout_marginLeft="10.0dip">
+
+                <TextView
+                    android:id="@+id/noticword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="今天还可以提现"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <TextView
+                    android:id="@+id/noticeredword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/noticword"
+                    android:layout_toRightOf="@+id/noticword"
+                    android:text="0"
+                    android:textColor="@color/global_red_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <TextView
+                    android:id="@+id/noticerightword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/noticword"
+                    android:layout_toRightOf="@+id/noticeredword"
+                    android:text="次。每月免手续费提现3次。"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="@dimen/global_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/noticwordlayout"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:gravity="center_vertical"
+                    android:text="交易密码"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <com.xpple.sheep.view.sKB.PasswordEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_password"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:inputType="textPassword"
+                    android:maxLength="6"
+                    android:minEms="6"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_mid_text_size"
+                    android:layout_toStartOf="@+id/tv_lost_password"
+                    android:paddingRight="15.0dip"
+                    android:paddingLeft="15.0dip"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tv_lost_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="60.0dip"
+                    android:paddingLeft="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:text="忘记密码"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="@dimen/global_text_size"
+                    android:layout_alignTop="@+id/tv_password"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:layout_width="1.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/tv_lost_password"
+                    android:background="@color/global_line_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/global_line_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/global_line_color" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/chong_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_password"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/cb_isagree"
+                    android:layout_width="30.0dip"
+                    android:layout_height="21.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="6.0dip"
+                    android:paddingTop="4.0dip"
+                    android:src="@mipmap/check_pressed" />
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cb_isagree"
+                    android:text="已阅读并同意《充值提现服务协议》，充值到账可能有一定延迟，请注意查收余额"
+                    android:textColor="@color/global_label_color"
+                    android:textSize="@dimen/global_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_withdrawals"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                android:layout_below="@+id/chong_rl"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/global_red_clickable_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="提 现"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/global_btn_text_size" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

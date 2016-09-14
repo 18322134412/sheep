@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/global_red_color"
+        android:layout_below="@+id/top_title_bar"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_invitation_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textColor="@android:color/white"
+            android:layout_above="@+id/tv_invitation_money"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:id="@+id/tv_invitation_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="New Text"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_qr"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_below="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/qr" />
+
+    <TextView
+        android:id="@+id/tv_total_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_qr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="请好友扫描我的二维码"
+        android:textColor="@color/global_gray_color" />
+
+    <TextView
+        android:id="@+id/tv_invitation_vip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_total_credits"
+        android:layout_marginTop="20dp"
+        android:text="New Text\nNew Text"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:foregroundGravity="center" />
+
+    <TextView
+        android:id="@+id/tv_btn_invitation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_title_banner_height"
+        android:layout_below="@+id/tv_invitation_vip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/global_red_clickable_selector"
+        android:gravity="center"
+        android:text="邀请好友"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/global_btn_text_size" />
+</RelativeLayout>

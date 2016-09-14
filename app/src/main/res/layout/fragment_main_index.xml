@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/global_background_color"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_index"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/global_background_color"
+            android:orientation="vertical">
+
+            <com.xpple.sheep.view.AdImageBanner
+                android:id="@+id/banner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                banner:bb_barColor="@color/global_transparent_half"
+                banner:bb_barPaddingBottom="5dp"
+                banner:bb_barPaddingLeft="10dp"
+                banner:bb_barPaddingRight="10dp"
+                banner:bb_barPaddingTop="5dp"
+                banner:bb_delay="5"
+                banner:bb_indicatorCornerRadius="2dp"
+                banner:bb_indicatorGap="7dp"
+                banner:bb_indicatorGravity="RIGHT"
+                banner:bb_indicatorHeight="14dp"
+                banner:bb_indicatorSelectRes="@mipmap/ic_select"
+                banner:bb_indicatorStyle="DRAWABLE_RESOURCE"
+                banner:bb_indicatorUnselectRes="@mipmap/ic_unselect"
+                banner:bb_indicatorWidth="14dp"
+                banner:bb_period="5"
+                banner:bb_scale="0.5625"
+                banner:bb_textSize="@dimen/global_text_size" />
+
+
+            <include
+                android:id="@+id/eight_icon"
+                layout="@layout/include_index_eight_icon" />
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:text="热门项目"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_big_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/cs_arrow_right" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divide_line_color" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_index_item_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

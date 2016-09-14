@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background_color"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:id="@+id/tv_belong_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_belong_avatar"
+                    android:layout_toEndOf="@+id/iv_belong_avatar"
+                    android:text="神马小二-二郎神"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_belong_avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerCrop"
+                    fresco:failureImage="@drawable/icon_error"
+                    fresco:placeholderImage="@mipmap/avatar_default"
+                    fresco:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_belong_avatar"
+                    android:layout_toEndOf="@+id/iv_belong_avatar"
+                    android:text="01-28 20:57"
+                    android:textColor="@color/global_text_color"
+                    android:textSize="@dimen/global_small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_type_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/tv_belong_nickname"
+                    android:text="京东商城"
+                    android:textColor="@color/global_text_color"
+                    android:textSize="@dimen/global_small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/tv_time"
+                    android:text="母婴用品"
+                    android:textColor="@color/global_text_color"
+                    android:textSize="@dimen/global_small_text_size" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_img_shower"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    fresco:failureImage="@drawable/icon_error"
+                    fresco:placeholderImage="@drawable/icon_stub"
+                    fresco:roundedCornerRadius="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_money"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/iv_img_shower"
+                    android:text="月光宝盒Q100 10000毫安聚合物移动电源"
+                    android:textColor="@color/global_black_color" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_img_shower"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@+id/iv_img_shower"
+                    android:text="京东手机端79包邮（2号8-12点）"
+                    android:textColor="@color/global_red_color" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.flyco.labelview.LabelView xmlns:lv="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            lv:lv_fill_triangle="true"
+            lv:lv_text="新"
+            lv:lv_text_size="12sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/divide_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/hots_views"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/hots_views" />
+
+            <TextView
+                android:id="@+id/tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/global_gray_color"
+                android:textSize="@dimen/global_small_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/divide_line_color" />
+
+        <LinearLayout
+            android:id="@+id/hots_diggs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_diggs"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_action_diggs_normal" />
+
+            <TextView
+                android:id="@+id/tv_diggs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/global_gray_color"
+                android:textSize="@dimen/global_small_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="@color/divide_line_color" />
+
+        <LinearLayout
+            android:id="@+id/hots_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/hots_comment" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/global_gray_color"
+                android:textSize="@dimen/global_small_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/divide_line_color" />
+</LinearLayout>

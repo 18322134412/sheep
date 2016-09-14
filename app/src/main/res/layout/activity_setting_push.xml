@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main_more"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background_color">
+
+    <View
+        android:id="@+id/paddingView"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:background="@color/global_red_color" />
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paddingView" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_title_bar"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rl_push_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/global_background_color">
+
+            <RelativeLayout
+                android:id="@+id/rl_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_title_banner_height"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="@dimen/global_title_banner_image_min"
+                    android:layout_height="@dimen/global_title_banner_image_min"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/ic_more_ac" />
+
+                <TextView
+                    android:id="@+id/tv_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/iv_notification"
+                    android:text="开启订阅推送"
+                    android:textColor="@color/title_banner_text_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_open_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_open"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_close_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_close"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@color/divide_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_voice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_title_banner_height"
+                android:layout_below="@+id/rl_notification"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    android:layout_width="@dimen/global_title_banner_image_min"
+                    android:layout_height="@dimen/global_title_banner_image_min"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/ic_more_nc" />
+
+                <TextView
+                    android:id="@+id/tv_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/iv_voice"
+                    android:text="声音"
+                    android:textColor="@color/title_banner_text_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_open_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_open"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_close_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_close"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@color/global_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_vibrate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_title_banner_height"
+                android:layout_below="@+id/rl_voice"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_vibrate"
+                    android:layout_width="@dimen/global_title_banner_image_min"
+                    android:layout_height="@dimen/global_title_banner_image_min"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/ic_more_hc" />
+
+                <TextView
+                    android:id="@+id/tv_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/iv_vibrate"
+                    android:text="震动"
+                    android:textColor="@color/title_banner_text_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_open_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_open"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_close_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_close"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_quiet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_title_banner_height"
+                android:layout_below="@+id/rl_vibrate"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_quiet"
+                    android:layout_width="@dimen/global_title_banner_image_min"
+                    android:layout_height="@dimen/global_title_banner_image_min"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/ic_more_share" />
+
+                <TextView
+                    android:id="@+id/tv_quiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/iv_quiet"
+                    android:text="安静时段"
+                    android:textColor="@color/title_banner_text_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_open_quiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_open"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_close_quiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/ic_close"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/divide_line_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@color/global_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_quiet_period"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_title_banner_height"
+                android:layout_below="@+id/rl_quiet"
+                android:background="@drawable/global_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_quiet_period"
+                    android:layout_width="@dimen/global_title_banner_image_min"
+                    android:layout_height="@dimen/global_title_banner_image_min"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:src="@mipmap/ic_more_feedback" />
+
+                <TextView
+                    android:id="@+id/tv_quiet_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/iv_quiet_period"
+                    android:text="从0：00到6：00"
+                    android:textColor="@color/title_banner_text_color"
+                    android:textSize="@dimen/global_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20.0dip"
+                    android:src="@mipmap/sc_arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_quiet_period"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true">
+
+                    <NumberPicker
+                        android:id="@+id/mHourSpinner_0"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textSize="20sp" />
+
+                    <NumberPicker
+                        android:id="@+id/mMinuteSpinner_0"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="到"
+                        android:textSize="20sp" />
+
+                    <NumberPicker
+                        android:id="@+id/mHourSpinner_1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textSize="20sp" />
+
+                    <NumberPicker
+                        android:id="@+id/mMinuteSpinner_1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/global_title_banner_height"
+                    android:background="@drawable/global_red_click_selector"
+                    android:gravity="center"
+                    android:text="设置"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/global_btn_text_size"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_below="@+id/ll_time"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

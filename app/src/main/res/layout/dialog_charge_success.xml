@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/dialog_root"
+        android:layout_width="290.0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:paddingBottom="20.0dip"
+        android:paddingTop="20.0dip">
+
+        <ImageView
+            android:id="@+id/image_content"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/dialog_charge_success"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:maxWidth="250.0dip"
+            android:text="您的充值已成功 !"
+            android:textColor="@color/global_black_color"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/toWebView"
+            android:layout_width="200.0dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/rectangle_blackline_back"
+            android:gravity="center"
+            android:padding="5.0dip"
+            android:text="我知道了"
+            android:textColor="@color/global_black_color"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+</RelativeLayout>

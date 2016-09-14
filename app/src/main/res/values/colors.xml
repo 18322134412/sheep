@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- base_color -->
+    <color name="global_text_color">#ff5f606d</color>
+    <color name="global_background_color">#fff2f2f2</color>
+    <color name="global_red_color">#fffd5353</color>
+    <color name="global_red_click_color">#ffe41e1e</color>
+    <color name="global_green_color">#ff40dc91</color>
+    <color name="global_black_color">#FF333333</color>
+    <color name="global_transparent_half">#af000000</color>
+    <color name="global_blue_color">#ff037BFF</color>
+    <color name="global_gray_color">#b6b6b6</color>
+    <color name="global_line_color">#FFD7D7D7</color>
+    <color name="global_label_color">#FF999999</color>
+    <color name="global_orange_color">#fffe9200</color>
+    <color name="divide_line_color">#ffdddddd</color>
+
+    <color name="global_fab_color">#affd5353</color>
+    <color name="global_fab_click_color">#afe41e1e</color>
+
+    <color name="title_banner_text_color">#FF333333</color>
+    <color name="alertdialog_line">#ffC6C6C6</color>
+    <color name="actionsheet_gray">#ff8f8f8f</color>
+</resources>

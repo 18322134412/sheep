@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background_color"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/packet_yao_tz" />
+
+    <TextView
+        android:id="@+id/promt"
+        android:layout_width="240.0dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center_horizontal"
+        android:text="小伙伴在等你发红包呐！"
+        android:textColor="#ffaaaaaa"
+        android:textSize="18.0sp" />
+
+    <TextView
+        android:id="@+id/nodataText"
+        android:layout_width="280.0dip"
+        android:layout_height="45.0dip"
+        android:layout_below="@+id/promt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40.0dip"
+        android:background="@drawable/global_red_click_selector"
+        android:gravity="center"
+        android:text="马上查看红包攻略"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/global_text_size" />
+</RelativeLayout>

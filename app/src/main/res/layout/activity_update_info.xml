@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.xpple.sheep.view.HeaderLayout
+        android:id="@+id/top_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_title_bar"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="30.0dip">
+
+        <com.xpple.sheep.view.ClearEditText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/bg_edit_text"
+            android:drawableLeft="@mipmap/acc_nickname"
+            android:drawablePadding="8.0dip"
+            android:hint="@string/tx_hint_nickname"
+            android:maxLength="9"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="@dimen/global_mid_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@+id/rl_nickname"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="@drawable/global_red_clickable_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="设  置"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/global_btn_text_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:text="昵称一旦设置成功将不能再次更改"
+        android:textColor="@color/global_black_color"
+        android:textSize="@dimen/global_small_text_size"
+        android:layout_below="@+id/tv_submit"
+        android:layout_alignParentEnd="false"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+
+</RelativeLayout>
